@@ -1,5 +1,6 @@
 const body = document.querySelector('body')
 const input = document.querySelector('#input')
+const firstTeamScore = document.querySelector('#first')
 const questions = [
   {
     id: 1,
@@ -88,7 +89,7 @@ cards.addEventListener('click', (e) => {
 
   input.value = +input.value + questions[id].point
   console.log(typeof +input.value)
-
+  console.log(firstTeamScore.value)
 
   e.target.classList.add('checked')
   body.appendChild(createFullscreen(questions[id]))
