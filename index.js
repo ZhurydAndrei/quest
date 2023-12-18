@@ -10,72 +10,72 @@ const questions = [
   {
     id: 2,
     point: 200,
-    context: '2'
+    context: 'Lorem ipsum dolor sit amet.'
   },
   {
     id: 3,
     point: 300,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 4,
     point: 100,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 5,
     point: 200,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 6,
     point: 300,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 7,
     point: 100,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 8,
     point: 200,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 9,
     point: 300,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 10,
     point: 100,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 11,
     point: 200,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 12,
     point: 300,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 13,
     point: 100,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 14,
     point: 200,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
   {
     id: 15,
     point: 300,
-    context: '3'
+    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
   },
 ]
 
@@ -87,11 +87,12 @@ cards.addEventListener('click', (e) => {
   const id = Number(e.target.id) - 1
 
 
-  input.value = +input.value + questions[id].point
-  console.log(typeof +input.value)
-  console.log(firstTeamScore.value)
+  // input.value = +input.value + questions[id].point
+  // console.log(typeof +input.value)
 
-  e.target.classList.add('checked')
+  if(e.target.classList.contains('card__questions-item')){
+    e.target.classList.add('checked')
+  }
   body.appendChild(createFullscreen(questions[id]))
 })
 
@@ -100,7 +101,6 @@ function createFullscreen(card) {
   fullscreen.classList.add('fs')
   fullscreen.textContent = card.context
   fullscreen.addEventListener('click', e => {
-    console.log(e.target)
     if(e.target.classList.contains('fs')) {
       fullscreen.classList.toggle('hidden')
     }
