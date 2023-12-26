@@ -5,77 +5,90 @@ const questions = [
   {
     id: 1,
     point: 100,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, eum.\n'
+    context: 'Как называется международная система охраны географических указаний?'
   },
   {
     id: 2,
     point: 200,
-    context: 'Lorem ipsum dolor sit amet.'
+    context: 'Назовите два географических указания белорусских правообладателей, которые охраняются в Беларуси.'
   },
   {
     id: 3,
     point: 300,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Этот продукт отличает ярко выраженный медово-сливочный вкус, золотистый цвет мякиша и наличие в центре фруктово-ягодной начинки, приготовленной из фруктов и ягод, произрастающих в определенной области. Вдоль контура расположен венцеобразный затейливый орнамент, в котором удачно передано общее внешнее сходство с живой натурой, отражена присущая предмету грация и изящество.\n' +
+      'В отношении этого продукта в Беларуси охраняется географическое указание.' +
+      'Назовите этот продукт.'
   },
   {
     id: 4,
     point: 100,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Назовите три вида товарных знаков, которые охраняются в Беларуси.'
   },
   {
     id: 5,
     point: 200,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Под этим товарным знаком производят и продают белорусскую одежду, в частности футболки, толстовки, пижамы и носки.\n' +
+      'В 2022 году этот товарный знак признан общеизвестным в Беларуси.\n' +
+      'Назовите этот товарный знак.\n'
   },
   {
     id: 6,
     point: 300,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Название этого мультфильма является фирменным наименованием фабрики страха, на которой работают главные герои мультфильма.\n' +
+      'Назовите этот мультфильм и фирменное наименование.\n'
   },
   {
     id: 7,
     point: 100,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'В какой момент скульптура переходит в общественное достояние?'
   },
   {
     id: 8,
     point: 200,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Этому объекту авторского права посвящен мультфильм 1968 года, в котором звучат строки:\n' +
+      '«Профессий много, но\n' +
+      'Прекрасней всех ОНО».\n' +
+      'О чем идет речь?\n'
   },
   {
     id: 9,
     point: 300,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'В честь этого персонажа назван закон США, который продлил срок действия авторских прав. Также компанию Дисней часто называют домом этого культового персонажа.\n' +
+      'О каком персонаже идет речь?\n'
   },
   {
     id: 10,
     point: 100,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Может ли способ нанесения краски на холст охраняться в качестве полезной модели в Беларуси?'
   },
   {
     id: 11,
     point: 200,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'В каком году заканчивается срок действия личных неимущественных прав на картину Марка Шагала «Над городом», написанную в 1918 году?'
   },
   {
     id: 12,
     point: 300,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Фото вопрос.\n' +
+      'Какому условию патентоспособности сорта растения явно не соответствует сорт томатов, изображенных на фото? \n'
   },
   {
     id: 13,
     point: 100,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'В прямом эфире радиопередачи звучит песня «Маленькой елочке холодно зимой». Какие объекты смежных прав имеют место в такой ситуации? '
   },
   {
     id: 14,
     point: 200,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Это изобретение содержит корпус, имитирующий ствол со средствами для закрепления естественных или искусственных ветвей, отличающаяся тем, что на корпусе размещены средства для крепления украшений.\n' +
+      'Назовите это изобретение.\n'
   },
   {
     id: 15,
     point: 300,
-    context: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, et?'
+    context: 'Патент на этот строительный материал, представляющий собой тонкие нити расплавленного стекла, был получен в США в 1934 г.\n' +
+      'А музыкальная группа с одноименным названием является исполнителем одного из главных новогодних хитов.\n' +
+      'Назовите изобретение и название музыкальной группы.\n'
   },
 ]
 

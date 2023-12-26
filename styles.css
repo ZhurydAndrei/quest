@@ -17,10 +17,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 body {
     position: relative;
     max-width: 1024px;
-    font-family: Arial, sans-serif;
+    font-family: "Century Gothic", sans-serif;
     margin: 0 auto;
-    background-color: #214b4b;
-    color: #fff;
+    background-color: #f9c534;
+    color: #000;
 }
 
 .main {
@@ -45,11 +45,14 @@ body {
     padding-bottom: 20px;
 }
 
+
 .card__title {
     padding: 30px;
-    border: 2px solid #fff;
+    border: 2px solid #f9c534;
     border-radius: 10px;
     margin-right: 20px;
+    background-color: #ff8a00;
+    color: #fff;
 }
 
 .card__questions {
@@ -68,6 +71,8 @@ body {
     border-radius: 10px;
     /*margin: 0 auto;*/
     cursor: pointer;
+        background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .fs {
