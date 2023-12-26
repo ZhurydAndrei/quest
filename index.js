@@ -220,7 +220,3 @@ nextLevel.addEventListener('click', e => {
   e.preventDefault()
   createTimeOneMinute()
 })
-
-// setTimeout(() => {
-//   createTimeOneMinute()
-// }, 0)
