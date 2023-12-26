@@ -1,6 +1,8 @@
 const body = document.querySelector('body')
 const input = document.querySelector('#input')
 const firstTeamScore = document.querySelector('#first')
+const nextLevel = document.querySelector('#next-level')
+const nextLevelTwo = document.querySelector('#next-level-two')
 const questions = [
   {
     id: 1,
@@ -45,16 +47,16 @@ const questions = [
   {
     id: 8,
     point: 200,
-    context: 'Этому объекту авторского права посвящен мультфильм 1968 года, в котором звучат строки:\n' +
-      '«Профессий много, но\n' +
-      'Прекрасней всех ОНО».\n' +
-      'О чем идет речь?\n'
+    context: 'Именем этого персонажа из одноименной сказки Шарля Перо названа кондитерская продукция компании Коммунарка.\n' +
+      'Назовите эту сказку и персонажа.\n'
   },
   {
     id: 9,
     point: 300,
-    context: 'В честь этого персонажа назван закон США, который продлил срок действия авторских прав. Также компанию Дисней часто называют домом этого культового персонажа.\n' +
-      'О каком персонаже идет речь?\n'
+    context: 'Этому объекту авторского права посвящен мультфильм 1968 года, в котором звучат строки:\n' +
+      '«Профессий много, но\n' +
+      'Прекрасней всех ОНО».\n' +
+      'О чем идет речь?\n'
   },
   {
     id: 10,
@@ -70,12 +72,13 @@ const questions = [
     id: 12,
     point: 300,
     context: 'Фото вопрос.\n' +
-      'Какому условию патентоспособности сорта растения явно не соответствует сорт томатов, изображенных на фото? \n'
+      'Какому условию патентоспособности сорта растения явно не соответствует сорт томатов, изображенных на фото? \n',
+    img: '12.jpg'
   },
   {
     id: 13,
     point: 100,
-    context: 'В прямом эфире радиопередачи звучит песня «Маленькой елочке холодно зимой». Какие объекты смежных прав имеют место в такой ситуации? '
+    context: 'В прямом эфире радиопередачи звучит песня «Маленькой елочке холодно зимой». Какие объекты смежных прав имеют место в такой ситуации?'
   },
   {
     id: 14,
@@ -86,8 +89,8 @@ const questions = [
   {
     id: 15,
     point: 300,
-    context: 'Патент на этот строительный материал, представляющий собой тонкие нити расплавленного стекла, был получен в США в 1934 г.\n' +
-      'А музыкальная группа с одноименным названием является исполнителем одного из главных новогодних хитов.\n' +
+    context: 'Патент на этот строительный материал, представляющий собой тонкие нити расплавленного стекла, был получен в 1934 г.\n' +
+      'А русская музыкальная группа с одноименным названием является исполнителем одного из главных новогодних хитов.\n' +
       'Назовите изобретение и название музыкальной группы.\n'
   },
 ]
@@ -113,6 +116,12 @@ function createFullscreen(card) {
   const fullscreen = document.createElement('div')
   fullscreen.classList.add('fs')
   fullscreen.textContent = card.context
+  if(card.img){
+    fullscreen.style.backgroundImage = `url(${card.img})`
+    fullscreen.style.backgroundRepeat = 'no-repeat'
+    fullscreen.style.backgroundSize = '100%'
+    fullscreen.style.color = 'rgba(255,255,255,0)'
+  }
   fullscreen.addEventListener('click', e => {
     if(e.target.classList.contains('fs')) {
       fullscreen.classList.toggle('hidden')
@@ -139,3 +148,79 @@ function createFullscreen(card) {
 
   return fullscreen
 }
+
+function createTimeOneMinute() {
+  nextLevel.style.display = 'none'
+  const minute = '60'
+  document.body.querySelector('.cards').classList.add('block')
+  const score = document.body.querySelector('.score__items')
+
+  score.style.flexDirection = 'initial'
+  score.style.marginRight = '100px'
+
+  const timer = document.createElement('button')
+  timer.innerText = minute
+  timer.classList.add('timer')
+
+  timer.addEventListener('click', (e) => {
+    e.preventDefault()
+    let i = 10
+    const timedId = setInterval(() => {
+      timer.innerText = --i
+      if(i === 0) {
+        timer.innerText = 'Время закончилось!'
+        clearInterval(timedId)
+
+        setTimeout(() => {
+          timer.innerText = minute
+        }, 2000)
+      }
+    }, 50)
+  })
+  body.style.textAlign = 'center'
+  body.appendChild(timer)
+}
+
+
+nextLevelTwo.addEventListener('click', e => {
+  // nextLevelTwo.style.display = 'none'
+  document.body.querySelector('.timer').style.display = 'none'
+  const minute = '300'
+  // document.body.querySelector('.cards').classList.add('block')
+  const score = document.body.querySelector('.score__items')
+
+  score.style.flexDirection = 'initial'
+  score.style.marginRight = '100px'
+
+  const timer = document.createElement('button')
+  timer.innerText = minute
+  timer.classList.add('timer')
+
+  timer.addEventListener('click', (e) => {
+    e.preventDefault()
+    let i = 10
+    const timedId = setInterval(() => {
+      timer.innerText = --i
+      if(i === 0) {
+        timer.innerText = 'Время закончилось!'
+        clearInterval(timedId)
+
+        setTimeout(() => {
+          timer.innerText = minute
+        }, 2000)
+      }
+    }, 50)
+  })
+  body.style.textAlign = 'center'
+  body.appendChild(timer)
+})
+
+
+nextLevel.addEventListener('click', e => {
+  e.preventDefault()
+  createTimeOneMinute()
+})
+
+// setTimeout(() => {
+//   createTimeOneMinute()
+// }, 0)

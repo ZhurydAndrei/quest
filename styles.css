@@ -15,8 +15,9 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 body {
+    box-sizing: border-box;
     position: relative;
-    max-width: 65%;
+    width: 70%;
     font-family: "Century Gothic", sans-serif;
     margin: 0 auto;
     background-color: #f9c534;
@@ -44,6 +45,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
+
 }
 
 
@@ -56,6 +58,8 @@ body {
     margin-right: 20px;
     background-color: #ff8a00;
     color: #fff;
+    /*box-shadow: rgba(0, 0, 0, 0.35) 7px 7px 15px;*/
+
 }
 
 .card__questions {
@@ -90,8 +94,10 @@ body {
     height: 90vh;
     margin-top: 50px;
     padding: 0 20px;
-    background-color: #6c6666;
+    background-color: #f9c534;
     font-size: 60px;
+    border: 4px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 10px;
 
 }
@@ -100,14 +106,20 @@ body {
     visibility: hidden;
 }
 
+.block {
+    display: none;
+}
+
 .checked {
     background-color: #8a8383;
 }
 
 .timer {
     padding: 20px;
-    font-size: 75px;
+    font-size: 100px;
     border-radius: 10px;
+    background-color: #ffe49a;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .score__items {
@@ -117,7 +129,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 70vh;
+    height: 65vh;
 }
 
 .score__item {
@@ -131,12 +143,14 @@ body {
     border: 2px solid #FFF;
     border-radius: 10px;
     text-align: center;
-    padding: 0 10px;
-    margin-right: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
 }
 
 .score__item-title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -151,4 +165,9 @@ body {
     text-align: center;
     margin: 0 auto;
     color: #ffffff;
+}
+
+.next-level {
+    cursor: pointer;
+    background-color: inherit;
 }
